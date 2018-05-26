@@ -1,0 +1,9 @@
+version: "3.4"
+services:
+  nginx-static-content-config:
+    build: .
+    image: vbenji/nginx-static-content-config:latest
+    environment: 
+      - NGINX_ENV_BACK_URL=http://my-back-url.local
+    ports:
+      - "8080:80"
